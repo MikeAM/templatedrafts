@@ -1,7 +1,48 @@
 @import "normalize.css";
 
-$bodybgcolor: #efefef;
+/* defaults & mixins */
+$bodybgcolor: #e6e6e6;
+$base-font-color: #2e2e2e;
+
+@mixin box-shadow($shadow-props) {
+  -webkit-box-shadow: $shadow-props;
+  -moz-box-shadow: $shadow-props;
+  box-shadow: $shadow-props;
+}
+
+@mixin border-radius() {
+  $border_radius: 4px;
+  -webkit-border-radius: $border_radius;
+  -moz-border-radius: $border_radius;
+  border-radius: $border_radius;
+}
+
+/* global */
+html {
+  font-size: 16px;
+}
 
 body {
-	background: $bodybgcolor;
+  background: $bodybgcolor;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+/* layout */
+.container {
+  box-sizing: border-box;
+  width: 1040px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  @include box-shadow(0px 3px 6px 1px #ccc);
+}
+
+.inline-image {
+  @include border-radius;
+  @include box-shadow(0px 2px 4px 1px #ccc)
+}
+.inline-image_caption {
+  font-size: .75rem;
+  font-color: lighten($base-font-color, 50%)
 }

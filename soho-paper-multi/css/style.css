@@ -1,3 +1,33 @@
 @import url(normalize.css);
+/* defaults & mixins */
+/* global */
+html {
+  font-size: 16px; }
+
 body {
-  background: #efefef; }
+  background: #e6e6e6;
+  font-size: 1rem;
+  line-height: 1.4rem; }
+
+/* layout */
+.container {
+  box-sizing: border-box;
+  width: 1040px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 6px 1px #cccccc;
+  -moz-box-shadow: 0px 3px 6px 1px #cccccc;
+  box-shadow: 0px 3px 6px 1px #cccccc; }
+
+.inline-image {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 4px 1px #cccccc;
+  -moz-box-shadow: 0px 2px 4px 1px #cccccc;
+  box-shadow: 0px 2px 4px 1px #cccccc; }
+
+.inline-image_caption {
+  font-size: .75rem;
+  font-color: #adadad; }

@@ -40,3 +40,4 @@ Thumbs.db
 # Custom for Soho #
 ######################
 ignore/
+.sass-cache/
